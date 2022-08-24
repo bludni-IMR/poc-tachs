@@ -2,37 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.PdfButton {
+ height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  margin: 7px;
+  padding: 8px;
+  border: 1px solid;
+}
+
+.Content {
+  width: 350px;
+  height: 100%;
+  border: 1px solid;
+}
+
+.ContentBox {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.ImageBox {
+  height: 100%;
+}
+
+.AppPrefsContent {
+  width: 350px;
+  border: 1px solid;
+}
+
+.AppPrefs {
+  align-items: center;
+  border: 2px solid;
 }

@@ -10,8 +10,12 @@ function App() {
   const [appPrefs, setAppPrefs] = useState();
 
   const getAppPrefs = async () => {
-    const { data } = await axios.get('/api/ApplicationPreferences');
-    setAppPrefs(data);
+    try {
+      const { data } = await axios.get('/api/ApplicationPreferences');
+      setAppPrefs(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

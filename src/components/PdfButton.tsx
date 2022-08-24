@@ -7,8 +7,12 @@ interface PdfProps {
 
 const PdfButton: React.FC<PdfProps> = ({ setPdfs }: PdfProps) => {
   const getPdfs = async () => {
-    const { data } = await axios.get('/api/pdf');
-    setPdfs(data);
+    try {
+      const { data } = await axios.get('/api/pdf');
+      setPdfs(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

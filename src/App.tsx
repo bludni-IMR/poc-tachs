@@ -37,10 +37,8 @@ function App() {
               <div className='Content'>
                 {pdfs.map((pdf, index) => {
                   return (
-                    <p>
-                      <a href={createPdfLink(pdf)} key={index}>
-                        {pdf}
-                      </a>
+                    <p key={index}>
+                      <a href={createPdfLink(pdf)}>{pdf}</a>
                     </p>
                   );
                 })}
@@ -60,9 +58,9 @@ function App() {
               <div className='AppPrefsContent'>
                 {Object.keys(appPrefs).map((key: string, i) => {
                   return (
-                    <div className='AppPrefs'>
-                      <p key={i}>{key}</p>
-                      <p key={`${i}-${key}`}>{appPrefs[key]}</p>
+                    <div key={i} className='AppPrefs'>
+                      <p>{key}</p>
+                      <p>{appPrefs[key]}</p>
                     </div>
                   );
                 })}

@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PdfButton from './components/PdfButton';
+import { createPdfLink } from './utils/links';
 
 axios.defaults.baseURL = process.env.REACT_APP_API;
 
@@ -35,7 +36,13 @@ function App() {
             {pdfs.length > 0 ? (
               <div className='Content'>
                 {pdfs.map((pdf, index) => {
-                  return <p key={index}>{pdf}</p>;
+                  return (
+                    <p>
+                      <a href={createPdfLink(pdf)} key={index}>
+                        {pdf}
+                      </a>
+                    </p>
+                  );
                 })}
               </div>
             ) : (
